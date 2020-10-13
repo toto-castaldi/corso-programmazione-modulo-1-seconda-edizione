@@ -1,33 +1,30 @@
-//console.log("ciao mondo !!!!");
-//console.log(3 + 5);
-//console.log(45 * 12 + 30);
-//console.log("io mi chiamo Toto e ho " + 44 + " anni");
-//console.log(3.2 + 0.5);
-//console.log(12.5 * 2);
+let posizione = 0;
+let direzione = +1;
+let velocita;
+let diametro;
 
 function setup() {
-    console.log("ciao sono la funzione setup");
     createCanvas(800, 800);
+    velocita = createSlider(0, 20, 5);
+    diametro = createSlider(1, width, width / 5);
 
+    console.log(width, height);
 }
 
-let x = 0;
-
 function draw() {
-    //Red Green Blue RGB
+    posizione = posizione + direzione * velocita.value();
+
     background(0, 0, 0);
 
-    //colore rosso per la linea
-    stroke(200, 0, 0);
-    //linea
-    line(200, 600, 400, 400);
+    fill(74, 74, 26);
 
-    x = x + 1;
+    ellipse(posizione, height / 2, diametro.value());
 
-    //non riempire
-    noFill();
+    if (posizione + diametro.value() / 2 > width) {
+        direzione = -1;
+    }
 
-    //ellisse
-    stroke(0, 255, 0);
-    ellipse(300, 300, 150, 80);
+    if (posizione - diametro.value() / 2 < 0) {
+        direzione = +1;
+    }
 }
