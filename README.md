@@ -20,3 +20,11 @@ corso programmazione modulo 1 seconda edizione
 - colori RGB
 - documentazione P5JS
 
+### Lezione 3
+
+[Qui il video](https://youtu.be/rVUW9Nq0MR0)
+
+- tool per la scelta dei colori RGB
+- variabili in Javascript
+- il comando ‘if’
+
