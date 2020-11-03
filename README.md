@@ -28,3 +28,20 @@ corso programmazione modulo 1 seconda edizione
 - variabili in Javascript
 - il comando ‘if’
 
+### Lezione 4
+
+[Qui il video](https://youtu.be/VJL7h_sJhCE)
+
+- introduzione alla programmazione ad oggetti
+
+### Lezione 5
+
+[Qui il video](https://youtu.be/xpBu7eg15JE)
+
+- approfondimenti programmazione ad oggetti
+- utilizzo del mouse con P5JS
+
+### Lezione 6
+
+- array
+- ciclo FOR

@@ -35,4 +35,16 @@ function Palla(pX, pY) {
         fill(this.red, this.green, this.blu, 200);
         ellipse(this.posizioneX, this.posizioneY, diametro.value());
     }
+
+    this.colpita = function (x, y) {
+        if (
+            x > this.posizioneX - diametro.value() / 2 
+            && x < this.posizioneX + diametro.value() / 2 
+            && y > this.posizioneY - diametro.value() / 2 
+            && y < this.posizioneY + diametro.value() / 2 ) {
+                return true;
+            } else {
+                return false;
+            }
+    }
 }
