@@ -11,19 +11,22 @@ function setup() {
 }
 
 function mouseClicked() {
-    let pallaColpita = false;
+    let almenoUnaPallaColpita = false;
 
     for (let i = 0; i < palle.length; i = i + 1) {
         let palla = palle[i];
-        if (palla.colpita(mouseX, mouseY)) {
-            pallaColpita = true;
-            palle.splice(i,1);
+        if (palla.stataColpita == false) {
+            palla.colpita(mouseX, mouseY);
+            if (palla.stataColpita) {
+                almenoUnaPallaColpita = true;
+            }
         }
     }
 
-    if (pallaColpita = false) {
+    if (almenoUnaPallaColpita == false) {
         palle.push(new Palla(mouseX, mouseY));
     }
+
 }
 
 function draw() {
@@ -31,8 +34,9 @@ function draw() {
 
     for (let i = 0; i < palle.length; i = i + 1) {
         let palla = palle[i];
-        palla.cambia();
-        palla.disegna();    
+        if (palla.stataColpita == false) {
+            palla.cambia();
+            palla.disegna();
+        }
     }
-    
 }
