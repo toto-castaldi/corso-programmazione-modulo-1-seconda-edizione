@@ -10,8 +10,6 @@ function Palla(pX, pY) {
     this.green = random(255);
     this.blu = random(255);
 
-    this.stataColpita = false;
-
     this.cambia = function () {
         this.posizioneX = this.posizioneX + this.direzioneX * velocita.value();
         this.posizioneY = this.posizioneY + this.direzioneY * velocita.value();
@@ -44,7 +42,7 @@ function Palla(pX, pY) {
             x < this.posizioneX + diametro.value() / 2 &&
             y > this.posizioneY - diametro.value() / 2 &&
             y < this.posizioneY + diametro.value() / 2) {
-                this.stataColpita = true;
+                return true;
             }
     }
 }
