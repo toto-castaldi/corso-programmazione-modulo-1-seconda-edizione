@@ -43,5 +43,13 @@ corso programmazione modulo 1 seconda edizione
 
 ### Lezione 6
 
+[Qui il video](https://youtu.be/M3VgJBqfjls)
+
 - array
 - ciclo FOR
+
+### Lezione 7
+
+- array splice
+- return da una funzione
+- tipi di dati booleani
